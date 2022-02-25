@@ -13,6 +13,6 @@ import com.generation.Farmacia.model.CategoriaModel;
  * da chave primária da tabela.
  */
 public interface CategoriaRepository extends JpaRepository<CategoriaModel, Long> {
-	public List<CategoriaModel>findAllByTituloContainingIgnoreCase(String titulo);
+	public List<CategoriaModel>findAllByDescricaoContainingIgnoreCase(String Descricao);
 
 }

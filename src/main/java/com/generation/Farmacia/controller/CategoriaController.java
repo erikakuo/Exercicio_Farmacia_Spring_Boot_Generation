@@ -36,19 +36,19 @@ public class CategoriaController {
 		return repository.findById(id).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.notFound().build());
 	}
 
-	@GetMapping("/titulo/{nome}")
-	public ResponseEntity<List<CategoriaModel>> GetByTitulo(@PathVariable String titulo) {
-		return ResponseEntity.ok(repository.findAllByTituloContainingIgnoreCase(titulo));
+	@GetMapping("/descricao/{descricao}")
+	public ResponseEntity<List<CategoriaModel>> GetByDescricao(@PathVariable String descricao) {
+		return ResponseEntity.ok(repository.findAllByDescricaoContainingIgnoreCase(descricao));
 	}
 
 	@PostMapping
-	public ResponseEntity<CategoriaModel> post(@RequestBody CategoriaModel titulo) {
-		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(titulo));
+	public ResponseEntity<CategoriaModel> post(@RequestBody CategoriaModel descricao) {
+		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(descricao));
 	}
 
 	@PutMapping
-	public ResponseEntity<CategoriaModel> put(@RequestBody CategoriaModel titulo) {
-		return ResponseEntity.status(HttpStatus.OK).body(repository.save(titulo));
+	public ResponseEntity<CategoriaModel> put(@RequestBody CategoriaModel descricao) {
+		return ResponseEntity.status(HttpStatus.OK).body(repository.save(descricao));
 	}
 
 	@DeleteMapping("/{id}")

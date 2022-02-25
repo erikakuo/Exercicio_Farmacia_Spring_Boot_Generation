@@ -32,7 +32,6 @@ public class CategoriaModel {
 	@JsonIgnoreProperties("tb_categoria")
 	private ProdutoModel produto;
 	
-	private String titulo;
 	public long getId() {
 		return id;
 		
@@ -48,14 +47,6 @@ public class CategoriaModel {
 
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
-	}
-
-	public String getTitulo() {
-		return titulo;
-	}
-
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
 	}
 
 }

@@ -29,7 +29,7 @@ public class ProdutoModel {
 
 	@NotNull
 	@Size(min = 10, max = 500)
-	private String descricaoCategoria;
+	private String descricao;
 
 	@NotNull
 	private double preco;
@@ -63,11 +63,11 @@ public class ProdutoModel {
 	}
 
 	public String getDescricaoTitulo() {
-		return descricaoCategoria;
+		return descricao;
 	}
 
-	public void setDescricaoTitulo(String descricaoCategoria) {
-		this.descricaoCategoria = descricaoCategoria;
+	public void setDescricaoTitulo(String descricao) {
+		this.descricao = descricao;
 	}
 
 	public double getPreco() {
